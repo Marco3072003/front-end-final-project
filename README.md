@@ -2,7 +2,7 @@
   FRONT ENT FINAL PROJECT
 </div>
 
-# Front End Final Application Project TOKOPEDIA CLONE - Generasi GIGIH 3.0
+# Front End  Application Final Project TOKOPEDIA CLONE - Generasi GIGIH 3.0
 
 > Repository ini berisi tentang Aplikasi Front End yang telah saya buat untuk memenuhi Tugas Final Project Generasi GIGIH 3.0.
 
