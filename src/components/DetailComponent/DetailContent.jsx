@@ -45,7 +45,7 @@ export default function DetailContent({handleCommentSubmit, handleChangeComment,
                                             
                             {   
                                 
-                                (!CommentList) ? (<h1 className="text-white">LOADING</h1>)
+                                (!CommentList) ? (<h1 className="text-white">LOADING COMMENTS....</h1>)
                                     : CommentList.map((comment,index)=>{
                                         return(<CommentItem key={index} username={comment.username} text={comment.comment}/>)
                                     
