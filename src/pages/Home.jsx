@@ -149,12 +149,12 @@ export default function Home({handleLogOut,handleLogOutModal, isLogOutModal}){
     }
   
   }
-  
+
   
 
   async function handleOpenVideo(videoId){
     const response = await plusViewVideo(videoId)
-    window.location.href = `https://back-end-final-project-gg30.vercel.app/detail/${videoId}`; 
+    window.location.href = `https://front-end-final-project-gg30.vercel.app/detail/${videoId}`; 
   }
 
   return (
