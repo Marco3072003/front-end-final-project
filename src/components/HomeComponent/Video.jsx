@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-export default function Video({isLoggedIn,handleOpenVideo,  handleOpenModal, videoId,imgUrl, title, views}){
+export default function Video({isLoggedIn,handleOpenVideo, handleOpenModal, videoId,imgUrl, title, views}){
    
     return isLoggedIn ?
 
@@ -31,7 +31,6 @@ export default function Video({isLoggedIn,handleOpenVideo,  handleOpenModal, vid
                     {(views === 0) ? (<p className='tracking-tight text-md font-medium ml-2 mb-5 text-gray-300'>belum ditonton</p>) : 
                     (<p className='tracking-tight text-md font-medium ml-2 mb-3 text-white'>{views}x ditonton</p>) }
 
-            
                 </div>
             )
             

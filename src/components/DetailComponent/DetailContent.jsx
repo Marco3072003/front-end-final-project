@@ -3,6 +3,7 @@ import InputWrapper from "./InputWrapper"
 import DetailVideo from "./DetailVideo"
 import Product from "./Product"
 import { Link } from 'react-router-dom'
+import ReactLoading from 'react-loading'
 
 export default function DetailContent({handleCommentSubmit, handleChangeComment,loading, commentText,loadingProduct, comments:{CommentList} , products:{ProductList} }){
     function handleRedirectProduct(productUrl){
@@ -22,11 +23,11 @@ export default function DetailContent({handleCommentSubmit, handleChangeComment,
                         <div className="comments-section-wrapper flex flex-col h-full ">
                             {/* comments-wrapper */}
                             
-                            <div className="comment-wrapper  h-5/6 flex flex-col px-2 overflow-auto" >
+                            <div className="comment-wrapper  h-5/6 flex flex-col px-2 overflow-auto relative" >
                                                 
                                 {   
                                     
-                                    (!CommentList) ? (<h1 className="text-white">LOADING COMMENTS....</h1>)
+                                    (!CommentList) ? <ReactLoading type={'spinningBubbles'} color={'green'} className="absolute left-[48%] top-[50%]"/>
                                         : CommentList.map(comment=>{
                                             return(<CommentItem key={comment.timestamp} username={comment.username} text={comment.comment}/>)
                                         

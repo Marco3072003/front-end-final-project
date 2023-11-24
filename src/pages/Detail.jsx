@@ -3,6 +3,7 @@ import DetailContent from '../components/DetailComponent/DetailContent'
 import LogOutModal from "../components/HomeComponent/LogOutModal";
 import { useState, useEffect } from 'react' 
 import {useParams} from 'react-router-dom'
+import ReactLoading from 'react-loading'
 
 export default function Detail(){
     const [commentText, setCommentText] = useState('');
