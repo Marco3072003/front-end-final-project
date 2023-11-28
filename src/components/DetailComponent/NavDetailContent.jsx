@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import Button from "../GeneralComponent/Button"
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 export default function NavDetailContent({handleLogOutModal,username}){
+
     const navigate = useNavigate()
-    if(!username) navigate('/')
+    useEffect(()=>{
+        !username && navigate('/')
+    },[username, navigate])
+    
+    
+    
     const text = 'You\'re Log In As ' + username
     return(
         <>

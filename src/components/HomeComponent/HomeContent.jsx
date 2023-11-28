@@ -1,5 +1,6 @@
 import short1 from '../../assets/images/thumbnail1.jpg'
 import Video from './Video'
+import ReactLoading from 'react-loading'
 
 export default function ({isLoggedIn, handleOpenModal, handleOpenVideo, videos, loading}){
     const {Videos} = videos;
@@ -11,7 +12,7 @@ export default function ({isLoggedIn, handleOpenModal, handleOpenVideo, videos, 
             <div className="video-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 gap-y-8 mt-2 mx-4">
 
                 {loading ? (
-                    <p></p>
+                    <ReactLoading type={'spinningBubbles'} color={'green'} className="absolute left-[48%] top-[50%]"/>
                 ) : 
                     Videos.map((video)=>{  
                                 return  ( <Video key={video.videoId} handleOpenVideo={handleOpenVideo} 
